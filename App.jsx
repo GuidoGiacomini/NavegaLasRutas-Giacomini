@@ -1,12 +1,31 @@
+import { useState } from "react"
+import { Routes } from "react-router-dom"
+import { Route } from "react-router-dom"
 import "./App.css"
-import NavBar from "./src/components/NavBar/NavBar"
+import WineDetails from "./src/components/WineDetails/WineDetails"
 import ItemsContainer from "./src/components/ItemsContainer/ItemsContainer"
+import Layout from "./src/components/Layout/Layout"
+
+const greetingFiller = "Descubrí nuestra exclusiva selección de 20 vinos únicos, elegidos para vos."
 
 function App() {
+
+    const [selectedCategory, setSelectedCategory] = useState(null)
+    const [cartCount, setCartCount] = useState(0)
+
+    const addToCart = (quantity) => {
+        setCartCount(prevCount => prevCount + quantity)
+    }
+
     return(
         <>
-            <NavBar />
-            <ItemsContainer placeholder={"Search wines..."} greeting={"¡Bienvenido!"} greetingFiller={"Busca entre nuestra selección de más de 20 únicos vinos"} />
+            <Layout setSelectedCategory={setSelectedCategory} cartCount={cartCount} >
+                <Routes> 
+                    <Route path="/" element={<ItemsContainer selectedCategory={selectedCategory} placeholder={"Search wines..."} greeting={"¡Bienvenido!"} greetingFiller={`${greetingFiller}`} />} />
+                    <Route path="/wine/:wineId" element={<WineDetails addToCart={addToCart} />} />
+                    <Route path="*" element={<h1 style={{ display: 'flex', alignItems: 'center', justifyContent : 'center' }}>Not Found</h1>} />
+                </Routes>
+            </Layout>
         </>
     )
 }

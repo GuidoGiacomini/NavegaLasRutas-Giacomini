@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './ItemsContainer.css'
 import closeIcon from './assets/circle-xmark.svg'
 import searchIcon from './assets/magnifying-glass.svg'
-
+import Content from '../Content/Content'
 
 const ItemsContainer = (props) =>{
 
@@ -13,10 +13,12 @@ const ItemsContainer = (props) =>{
         
         const timer = setTimeout(() => {
             setIsVisible(true)
+            
         }, 100)
 
         return () => clearTimeout(timer)
     }, [])
+    
 
     return(
         <div className='containerContent'>
@@ -28,8 +30,10 @@ const ItemsContainer = (props) =>{
                 <div className='greeting'><div>{props.greeting}</div>
                 <div className={`greetingFiller ${isVisible ? 'visible' : ''}`}>{props.greetingFiller}</div> 
             </div>
-                <div className='content'></div>
+            
+            <div className='content'><Content selectedCategory={props.selectedCategory} /></div>
         </div>
+        
     )
 }
 

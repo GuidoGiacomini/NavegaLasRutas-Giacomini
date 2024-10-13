@@ -1,0 +1,97 @@
+.detailsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 5vh;
+}
+
+.wineCard{
+    width: 30vw;
+    height: 60vh;
+    box-shadow: 0 0 5px gray;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    flex-direction: column;
+    background-color: white;
+    transition: all 0.25s ease-in-out;
+    overflow: hidden;
+}
+
+.wineTitle{
+    font-weight: 500;
+    font-size: 20px;
+    text-align: start;
+    z-index: 1;
+    color: black;
+}
+.winePrice{
+    font-weight: 600;
+    font-size: 26px;
+    text-align: start;
+    z-index: 1;
+}
+.wineDesc{
+    z-index: 1;
+}
+.wineStock{
+    font-weight: 300;
+    font-size: 14px;
+    text-align: start;
+    z-index: 1;
+}
+
+.addCartContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.addItemCart{
+    width: 100%;
+    margin-top: 20px;
+    background-color: rgb(116, 205, 240);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px 30px;
+}
+
+.addItemCart:hover{
+    background-color: rgb(62, 186, 235);
+    cursor: pointer;
+}
+
+.addItemCart:active{
+background-color: rgb(116, 205, 240);
+}
+
+.quantitySelector{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.adjustQuantity{
+    width: 3vw;
+    border: none;
+    outline: none;
+    background-color: rgb(62, 186, 235);
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.adjustQuantity:hover{
+    cursor: pointer;
+    background-color: rgb(116, 205, 240);
+}
+
+.adjustQuantity:active{
+    background-color: rgb(183, 222, 245);
+}

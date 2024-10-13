@@ -2,7 +2,7 @@
 
 nav{
     margin: 5vh 0;
-    width: 100%;
+    width: 70vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -28,6 +28,11 @@ nav{
     cursor: pointer;
     transform: scale(1.05);
     color: rosybrown;
+}
+
+.homeLink{
+  text-decoration: none;
+  color: black;
 }
 
 @keyframes bounce-right {
