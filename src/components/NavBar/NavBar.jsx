@@ -3,7 +3,7 @@ import wineBottle from './assets/wine-bottle.svg'
 import './NavBar.css'
 import { Link } from 'react-router-dom'
 
-const NavBar = ({ setSelectedCategory, cartCount }) => {
+const NavBar = ({ setSelectedCategory }) => {
     return (
         <nav>
             <div>
@@ -18,7 +18,7 @@ const NavBar = ({ setSelectedCategory, cartCount }) => {
                 <button className="navBtns" onClick={() => setSelectedCategory("dessert")} >Dessert</button>
             </div>
             <div>
-                <CartWidget counter={cartCount} />
+                <CartWidget />
             </div>
             
         </nav>
