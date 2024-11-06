@@ -20,7 +20,7 @@ Esta aplicación es un e-commerce de vinos desarrollada en React, usando Firebas
 
 ## Componentes Principales
 
-1. **NavBar**: Barra de navegación que permite filtrar los vinos por categoría; contiene el carrito mostrando cantidad de productos agregados.
+1. **NavBar**: Barra de navegación que permite filtrar los vinos por categoría; contiene el carrito mostrando la cantidad de productos agregados.
 2. **Content**: Componente que muestra la lista de vinos filtrada por categoría.
 3. **WineDetails**: Componente que muestra información detallada de cada vino en específico y permite agregarlo al carrito.
 4. **Cart**: Componente que muestra los productos agregados al carrito, con el total de la compra y opción para confirmar la misma.
