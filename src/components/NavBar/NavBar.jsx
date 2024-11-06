@@ -1,7 +1,7 @@
 import CartWidget from '../CartWidget/CartWidget'
 import wineBottle from './assets/wine-bottle.svg'
-import './NavBar.css'
 import { Link } from 'react-router-dom'
+import './NavBar.css'
 
 const NavBar = ({ setSelectedCategory }) => {
     return (
